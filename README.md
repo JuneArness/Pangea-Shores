@@ -8,21 +8,25 @@ Website design and development by SAP Development Solutions, LLC.
 
 ## Project structure
 
+Flat layout: every file sits in one folder, with no subfolders. This makes it easy to
+upload through GitHub's website one file at a time.
+
 ```text
 pangea-shores/
-├── index.html        Home
-├── about.html        About
-├── services.html     Services
-├── insights.html     Insights & Approach
-├── contact.html      Contact
-├── css/style.css     All styles (brand colors are the :root variables at the top)
-├── js/script.js      Mobile menu, header state, reveal animations, form validation, footer year
-├── images/
-│   ├── pangea-shores-logo.jpg
-│   └── sap-development-solutions-logo.jpg
-├── README.md
-└── .gitignore
+├── index.html
+├── about.html
+├── services.html
+├── insights.html
+├── contact.html
+├── style.css                          All styles (brand colors are the :root variables at the top)
+├── script.js                          Mobile menu, animations, form validation, footer year
+├── pangea-shores-logo.jpg
+├── sap-development-solutions-logo.jpg
+└── README.md
 ```
+
+Keep new images in this same folder (for example mike-henderson.jpg) and refer to them by
+file name only.
 
 ## 1. Run the site locally (Python 3.11)
 
@@ -143,16 +147,16 @@ The exact tag is in the same comment block.
 
 | Image | How to replace |
 | --- | --- |
-| Pangea Shores logo | Overwrite `images/pangea-shores-logo.jpg` with a file of the same name. A **transparent PNG or SVG** version of the logo would look sharper in the header; if one becomes available, save it in `images/` and update the `src` in the header of each page |
-| SAP Development Solutions logo | Overwrite `images/sap-development-solutions-logo.jpg` |
-| Mike Henderson photo | Add `images/mike-henderson.jpg` (portrait, 4:5 ratio). Instructions are in the Leadership comment in `about.html` |
+| Pangea Shores logo | Overwrite `pangea-shores-logo.jpg` with a file of the same name. A **transparent PNG or SVG** version of the logo would look sharper in the header; if one becomes available, save it in `` and update the `src` in the header of each page |
+| SAP Development Solutions logo | Overwrite `sap-development-solutions-logo.jpg` |
+| Mike Henderson photo | Add `mike-henderson.jpg` (portrait, 4:5 ratio). Instructions are in the Leadership comment in `about.html` |
 | Article images | Add an `<img>` inside the `.article-media` block of each card in `insights.html`. Images are cropped to 16:9 automatically |
 
 Only use images you own or have a license to use.
 
 ## Customizing the look
 
-Brand colors, fonts and spacing are CSS variables at the top of `css/style.css`.
+Brand colors, fonts and spacing are CSS variables at the top of `style.css`.
 Change a value there and it updates across the whole site.
 
 Fonts load from Google Fonts: Newsreader (headings), Manrope (body), and Poppins
