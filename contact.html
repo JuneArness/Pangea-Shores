@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Pangea Shores | Business Consulting</title>
+  <meta name="description" content="Start a conversation with Pangea Shores about your organization's goals and challenges.">
+
+  <!-- ================================================================
+       DOMAIN: replace https://www.example.com/ with the real domain
+       on every page (canonical, og:url, og:image, twitter:image).
+       ================================================================ -->
+  <link rel="canonical" href="https://www.example.com/contact.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pangea Shores">
+  <meta property="og:title" content="Contact | Pangea Shores | Business Consulting">
+  <meta property="og:description" content="Start a conversation with Pangea Shores about your organization's goals and challenges.">
+  <meta property="og:url" content="https://www.example.com/contact.html">
+  <meta property="og:image" content="https://www.example.com/images/pangea-shores-logo.jpg">
+  <meta property="og:image:alt" content="Pangea Shores logo">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact | Pangea Shores | Business Consulting">
+  <meta name="twitter:description" content="Start a conversation with Pangea Shores about your organization's goals and challenges.">
+  <meta name="twitter:image" content="https://www.example.com/images/pangea-shores-logo.jpg">
+
+  <meta name="theme-color" content="#0a1e38">
+  <link rel="icon" type="image/jpeg" href="images/pangea-shores-logo.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,450;6..72,500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Pangea Shores, home">
+        <img src="images/pangea-shores-logo.jpg" alt="" width="56" height="56">
+        <span class="brand-name">Pangea Shores</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Open menu</span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="contact.html" class="nav-cta" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title">Let's Start a Conversation</h1>
+        <p class="lead">Meaningful consulting relationships begin with understanding the challenge. Tell us a little about your organization and what you're working through.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Contact form and details">
+      <div class="container contact-grid">
+        <div class="form-card">
+          <h2>Send a message</h2>
+          <p class="form-note" style="margin-bottom:1.75rem">Fields marked <span class="req" aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
+
+          <!-- ================================================================
+               FORM ENDPOINT: connect a form service here.
+               This is a static site, so the form cannot send email by itself.
+               Until an endpoint is added, submitting shows an honest
+               "not connected yet" notice instead of pretending to send.
+
+               Formspree (recommended for GitHub Pages):
+                 1. Create a free form at https://formspree.io
+                 2. Change the line below to:
+                    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+
+               Netlify Forms (only if the site is hosted on Netlify):
+                    <form id="contact-form" name="contact" method="POST" data-netlify="true" action="/thank-you.html" novalidate>
+               ================================================================ -->
+          <form id="contact-form" action="" method="POST" novalidate>
+            <!-- Spam trap for Formspree. Leave empty; hidden from people. -->
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="first-name">First name <span class="req" aria-hidden="true">*</span></label>
+                <input id="first-name" name="firstName" type="text" autocomplete="given-name" required aria-describedby="first-name-error">
+                <span class="field-error" id="first-name-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="last-name">Last name <span class="req" aria-hidden="true">*</span></label>
+                <input id="last-name" name="lastName" type="text" autocomplete="family-name" required aria-describedby="last-name-error">
+                <span class="field-error" id="last-name-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="email-error">
+                <span class="field-error" id="email-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="phone">Phone <span class="optional">(optional)</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="phone-error">
+                <span class="field-error" id="phone-error" aria-live="polite"></span>
+              </div>
+              <div class="field full">
+                <label for="company">Company <span class="optional">(optional)</span></label>
+                <input id="company" name="company" type="text" autocomplete="organization" aria-describedby="company-error">
+                <span class="field-error" id="company-error" aria-live="polite"></span>
+              </div>
+              <div class="field full">
+                <label for="subject">Subject <span class="req" aria-hidden="true">*</span></label>
+                <select id="subject" name="subject" required aria-describedby="subject-error">
+                  <option value="">Choose a subject</option>
+                  <option>Strategic consulting</option>
+                  <option>Business growth</option>
+                  <option>Organizational strategy</option>
+                  <option>Operational improvement</option>
+                  <option>Leadership advisory</option>
+                  <option>General inquiry</option>
+                </select>
+                <span class="field-error" id="subject-error" aria-live="polite"></span>
+              </div>
+              <div class="field full">
+                <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" rows="6" required aria-describedby="message-error"></textarea>
+                <span class="field-error" id="message-error" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-dark" type="submit">Send Message</button>
+              <p class="form-note">We'll only use your details to respond to your message.</p>
+            </div>
+            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <aside class="contact-details" aria-labelledby="details-title">
+          <h2 id="details-title">Contact details</h2>
+          <!-- EDIT: replace placeholders with real details.
+               Email:  <a href="mailto:name@domain.com">name@domain.com</a>
+               Phone:  <a href="tel:+15555555555">(555) 555-5555</a> -->
+          <ul class="detail-list">
+            <li><span class="detail-label">Email</span><span class="detail-value">[Email Address]</span></li>
+            <li><span class="detail-label">Phone</span><span class="detail-value">[Phone Number]</span></li>
+            <li><span class="detail-label">Location</span><span class="detail-value">[Business Location]</span></li>
+          </ul>
+
+          <h2>What happens next</h2>
+          <ol class="next-steps">
+            <li><strong>We review your message</strong> and reach out to set up a time to talk.</li>
+            <li><strong>We have an initial conversation</strong> about your goals and challenges.</li>
+            <li><strong>We suggest a path forward</strong> that fits your situation, with no obligation.</li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/pangea-shores-logo.jpg" alt="Pangea Shores logo" width="120" height="120" loading="lazy">
+          <!-- EDIT: one-sentence company description -->
+          <p>Business consulting for leaders who want clear strategy and practical plans for sustainable growth.</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2 class="footer-heading">Explore</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="footer-heading">Get in touch</h2>
+          <!-- EDIT: replace the three placeholders below with real contact details.
+               Example email link: <a href="mailto:name@domain.com">name@domain.com</a>
+               Example phone link: <a href="tel:+15555555555">(555) 555-5555</a> -->
+          <address class="footer-contact">
+            <p>[Email Address]</p>
+            <p>[Phone Number]</p>
+            <p>[Business Location]</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Pangea Shores. All rights reserved.</p>
+        <p class="dev-credit">
+          <img src="images/sap-development-solutions-logo.jpg" alt="SAP Development Solutions, LLC logo" width="40" height="40">
+          <span>Website Design &amp; Development by SAP Development Solutions, LLC</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
